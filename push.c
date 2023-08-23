@@ -1,41 +1,6 @@
 #include "monty.h"
 
 /**
- *is_digit - checks if its a digit
- *@c: the one to be checked
- *Return: the digit
- */
-
-int is_digit(char c)
-{
-	return (c >= '0' && c <= '9');
-}
-
-/**
- *is_valid_number - checks if valid
- *@str: the one to be checked
- *Return: 0 or 1
- */
-
-int is_valid_number(const char *str)
-{
-	if (*str == '-' || *str == '+')
-	{
-		str++;
-	}
-
-	while (*str)
-	{
-		if (!is_digit(*str))
-		{
-			return (0);
-		}
-		str++;
-	}
-	return (1);
-}
-
-/**
  *push - prints all the elements of a doubly linked list.
  *@head: head of the list
  *@lNum: line number
