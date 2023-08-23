@@ -43,7 +43,7 @@ int is_valid_number(const char *str)
 
 void push(stack_t **head, unsigned int lNum)
 {
-	long int int_val;
+	int int_val;
 
 	if (infos.arg == NULL || *infos.arg == '\0')
 	{

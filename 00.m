@@ -1,4 +1,2 @@
-push
-push 2
-
+push csswwx
 pall
