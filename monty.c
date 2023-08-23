@@ -19,7 +19,7 @@ void trimLeadingSpaces(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] != ' ')
+		if (str[i] != ' ' && str[i] != '\t')
 			break;
 		leadingSpaces++;
 	}
@@ -142,9 +142,9 @@ int main(int ac, char *av[])
 	while (fgets(line, sizeof(line), file))
 	{
 		infos.lNum++;
-		if (line[0] == '#' || line[0] == '\n')
-		continue;
 		trimLeadingSpaces(line);
+		if (line[0] == '#' || line[0] == '\n')
+			continue;
 		condenseSpaces(line);
 		opcode = strtok(line, " \n");
 		infos.arg = strtok(NULL, " \n");
