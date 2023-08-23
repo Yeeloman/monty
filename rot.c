@@ -29,10 +29,9 @@ void rotl(stack_t **head, __attribute__((unused)) unsigned int lNum)
  *@lNum: line number
  */
 
-void rotr(stack_t **head, unsigned int lNum)
+void rotr(stack_t **head, __attribute__((unused)) unsigned int lNum)
 {
 	stack_t *temp;
-	(void)lNum;
 
 	if (!*head || !(*head)->next)
 		return;
