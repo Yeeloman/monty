@@ -11,18 +11,13 @@ void pstr(stack_t **head, unsigned int lNum)
 	stack_t *temp;
 	(void)lNum;
 
-	if (*head == NULL)
-	{
-		putchar('\n');
-		return;
-	}
 	temp = *head;
 	while (temp)
 	{
 		if (temp->n <= 0 || temp->n > 127)
 			break;
-		putchar(temp->n);
+		printf("%c", temp->n);
 		temp = temp->next;
 	}
-	putchar('\n');
+	printf("\n");
 }
