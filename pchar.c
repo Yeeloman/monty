@@ -27,6 +27,5 @@ void pchar(stack_t **head, unsigned int lNum)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	putchar(temp->n);
-	putchar('\n');
+	printf("%c\n", temp->n);
 }
