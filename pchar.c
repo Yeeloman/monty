@@ -18,8 +18,6 @@ void pchar(stack_t **head, unsigned int lNum)
 		exit(EXIT_FAILURE);
 	}
 	temp = *head;
-	/*while (temp->next)
-		temp = temp->next;*/
 	if (temp->n < 0 || temp->n > 127)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", lNum);
