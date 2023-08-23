@@ -45,7 +45,7 @@ void push(stack_t **head, unsigned int lNum)
 {
 	long int int_val;
 
-	if (infos.arg == NULL)
+	if (infos.arg == NULL || *infos.arg == '\0')
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", lNum);
 		fclose(infos.file);
