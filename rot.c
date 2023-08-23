@@ -6,10 +6,9 @@
  *@lNum: line number
  */
 
-void rotl(stack_t **head, unsigned int lNum)
+void rotl(stack_t **head, __attribute__((unused)) unsigned int lNum)
 {
 	stack_t *temp, *rot;
-	(void)lNum;
 
 	if (!*head || !(*head)->next)
 		return;
