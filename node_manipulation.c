@@ -14,7 +14,8 @@ void add_node(stack_t **head, int n)
 	temp = malloc(sizeof(stack_t));
 	if (!temp)
 	{
-		printf("Error: malloc failed\n");
+		fprintf(stderr, "Error: malloc failed\n");
+		fclose(infos.file);
 		exit(EXIT_FAILURE);
 	}
 	temp->n = n;
@@ -40,6 +41,7 @@ void add_node_end(stack_t **head, int n)
 	if (!temp)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		fclose(infos.file);
 		exit(EXIT_FAILURE);
 	}
 	temp->next = NULL;
