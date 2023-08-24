@@ -1,6 +1,6 @@
 #include "monty.h"
 
-info_t infos = {NULL, NULL, NULL, 0, 0};
+info_t infos = {NULL, NULL, 0, 0};
 
 /**
  * trimLeadingSpaces - Remove leading spaces from a string
@@ -148,7 +148,6 @@ int main(int ac, char *av[])
 		condenseSpaces(line);
 		opcode = strtok(line, " \n");
 		infos.arg = strtok(NULL, " \n");
-		infos.snd_arg = strtok(NULL, " \n");
 		n = instruction(opcode, &stack, infos.lNum);
 		if (n == 1)
 		{

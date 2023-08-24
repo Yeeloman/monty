@@ -52,7 +52,6 @@ typedef struct instruction_s
 typedef struct info_s
 {
 	char *arg;
-	char *snd_arg;
 	FILE *file;
 	unsigned int lNum;
 	int fifo;

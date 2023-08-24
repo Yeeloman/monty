@@ -52,9 +52,9 @@ void push(stack_t **head, unsigned int lNum)
 	}
 	int_val = atoi(infos.arg);
 	n = is_valid_number(infos.arg);
-	if ((int_val == 0 && strcmp(infos.arg, "0") != 0) || n != 1)
+	if ((int_val == 0 && strcmp(infos.arg, "0") != 0)  || n != 1)
 	{
-		fprintf(stderr, "L%d:  usage: push integer\n", lNum);
+		fprintf(stderr, "L%d: usage: push integer\n", lNum);
 		fclose(infos.file);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
