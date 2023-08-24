@@ -22,9 +22,9 @@
  */
 typedef struct stack_s
 {
-int n;
-struct stack_s *prev;
-struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -37,8 +37,8 @@ struct stack_s *next;
  */
 typedef struct instruction_s
 {
-char *opcode;
-void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
@@ -52,6 +52,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
 typedef struct info_s
 {
 	char *arg;
+	char *snd_arg;
 	FILE *file;
 	unsigned int lNum;
 	int fifo;
@@ -66,6 +67,8 @@ int instruction(char *opcode, stack_t **stack, unsigned int lNum);
 void trimLeadingSpaces(char *str);
 void condenseSpaces(char *str);
 /*push.c*/
+int is_digit(char c);
+int is_valid_number(char *str);
 void push(stack_t **head, unsigned int lNum);
 /*pall.c*/
 void pall(stack_t **head, unsigned int lNum);
