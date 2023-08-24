@@ -47,7 +47,6 @@ void push(stack_t **head, unsigned int lNum)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", lNum);
 		fclose(infos.file);
-		free(infos.arg);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
@@ -57,7 +56,6 @@ void push(stack_t **head, unsigned int lNum)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", lNum);
 		fclose(infos.file);
-		free(infos.arg);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
